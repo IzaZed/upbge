@@ -98,6 +98,7 @@ static const EnumPropertyItem node_socket_type_items[] = {
     {SOCK_COLLECTION, "COLLECTION", 0, "Collection", ""},
     {SOCK_TEXTURE, "TEXTURE", 0, "Texture", ""},
     {SOCK_MATERIAL, "MATERIAL", 0, "Material", ""},
+    {SOCK_CONDITION, "CONDITION", 0, "Condition", ""}
     {0, NULL, 0, NULL, NULL},
 };
 
@@ -11993,6 +11994,8 @@ static void rna_def_node_socket_standard_types(BlenderRNA *brna)
   rna_def_node_socket_texture(brna, "NodeSocketTexture", "NodeSocketInterfaceTexture");
 
   rna_def_node_socket_material(brna, "NodeSocketMaterial", "NodeSocketInterfaceMaterial");
+
+  rna_def_node_socket_virtual(brna, "NLConditionSocket");
 }
 
 static void rna_def_internal_node(BlenderRNA *brna)
